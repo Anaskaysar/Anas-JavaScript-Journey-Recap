@@ -87,3 +87,49 @@ const restaurant = {
 // for (const day of Object.keys(openingHours)) {
 //     console.log(day)
 // }
+
+
+// //Sets
+// const orderSet = new Set(['Pasta', 'Pizza', 'Risoto', 'Pasta', 'Pizza']);
+// console.log(orderSet)
+
+// //Set elements are unique -- Sets are also iterable
+
+// console.log(orderSet.size)
+// console.log(orderSet.has('Pizza'))
+// console.log(orderSet.add('Bread'))
+// console.log(orderSet.add('Bread'))
+// console.log(orderSet.delete('Bread'))
+// console.log(orderSet.delete('Bread'))
+// console.log(orderSet.size)
+// orderSet.clear()
+
+
+// //usecase - remove duplicate values from an array
+
+// const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter'];
+
+// const stuffUnique = [...new Set(staff)];
+// console.log(stuffUnique);
+// console.log(staff);
+// //Maps
+
+// console.log(new Set('Kaysarul Anas Apurba').size);
+
+
+
+//Maps - like object but keys can be of any data type
+// Map iteration
+
+
+const question = new Map([
+    ['question', 'What is the best PGL in the world'],
+    [1, 'C'],
+    [2, 'Java'],
+    [3, 'JS'],
+    ['correct', 3],
+    [true, 'Correct'],
+    [false, 'Try again']
+]);
+
+console.log(question)

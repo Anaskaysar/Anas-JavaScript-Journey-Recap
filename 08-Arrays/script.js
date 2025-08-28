@@ -61,6 +61,11 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+
+const displayMovements = function (movements) {
+
+}
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -73,3 +78,41 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+
+/*
+Your task is to create a function called checkDogs which accepts these two arrays and performs the following steps:
+
+Julia discovered that the owners of the first and the last two dogs actually have cats, not dogs. Therefore, create a shallow copy of Julia's array and remove the cat ages from the copied array. It is important to copy the array to avoid mutating the function's arguments.
+
+Create a new array combining both Julia's corrected data and Kate's data.
+
+For each dog in the combined array, log to the console whether it is an adult or a puppy according to the age rules, using descriptive strings.
+
+Finally, run this function for both test data sets. This challenge encourages you to use the array tools learned in previous lectures, and it does not require much new thinking.
+
+*/
+
+const dogsJulia1 = [3, 5, 2, 12, 7];
+const dogsKate1 = [4, 1, 15, 8, 3];
+const dogsJulia2 = [9, 16, 6, 8, 3];
+const dogsKate2 = [10, 5, 6, 1, 4];
+
+function checkDogs(dogsJulia, dogsKate) {
+  // Shallow copy & remove cats (first and last two)
+  const correctedJulia = dogsJulia.slice(1, -2);
+  console.log(correctedJulia)
+  // Combine both arrays
+  const allDogs = correctedJulia.concat(dogsKate);
+
+  // Loop through and log
+  allDogs.forEach((age, i) => {
+    if (age >= 3) {
+      console.log(`Dog number ${i + 1} is an adult, and is ${age} years old 🐕`);
+    } else {
+      console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+    }
+  });
+}
+
+checkDogs(dogsJulia1, dogsKate1);
+checkDogs(dogsJulia2, dogsKate2);
